@@ -36,7 +36,7 @@
             transform-origin: center center;
         }
 
-        /* The Back Button */
+        
         #backBtn {
             position: absolute;
             top: 20px;
@@ -61,7 +61,7 @@
             transform: scale(1.05);
         }
 
-        /* Show button and change cursor when zoomed */
+        
         .is-zoomed {
             cursor: zoom-out;
         }
@@ -93,6 +93,31 @@
         .is-zoomed .hint {
             opacity: 0;
         }
+        .btn {
+            width: 100%;
+            display: inline-flex;
+            align-items: center;
+            padding: 10px 47%;
+            background: black;
+            color: white;
+            border: 4px solid #000;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 800;
+           
+            font-size: clamp(20px, 6vw, 32px);
+            transition: 0.3s ease;
+        }
+
+        .btn:hover {
+            background: white;
+            color: red;
+        }
+
+        
+        @media (min-width: 768px) {
+            h3 { -webkit-text-stroke: 3px #000; }
+        }
     </style>
 </head>
 <body>
@@ -100,9 +125,9 @@
     <div class="zoom-container" id="zoomWrapper">
         <button id="backBtn">← Back to Full View</button>
         <img  src="https://image2url.com/r2/default/images/1774849157051-7b7b221e-d72f-46b5-a06e-5153b9a08f6c.png" alt="image" alt="Interactive Map" id="mapImage">
-        <div class="hint">Click to explore</div><div align="right">
-
-<a  href="Home.html" class="btn" style="display: inline-flex;align-items: center;grid-gap: 8px;padding: 10px 30px;background: transparent;color: brown;border-radius: 10px;text-decoration: none;font-weight: 800;font-size: 38px;box-shadow: transparent;overflow: hidden;z-index: 2;">Back </a></div>
+        <div align="center">
+<
+<a href="Home.html" class="btn">Back </a></div>
     </div>
 
     <script>
@@ -110,9 +135,9 @@
         const img = document.getElementById('mapImage');
         const backBtn = document.getElementById('backBtn');
 
-        // Main Toggle Logic
+        
         container.addEventListener('click', (e) => {
-            // If we click the back button specifically, handle it separately to avoid double-toggling
+            
             if (e.target === backBtn) return; 
 
             const isZoomed = container.classList.toggle('is-zoomed');
@@ -127,9 +152,9 @@
             }
         });
 
-        // Back Button Specific Logic
+        
         backBtn.addEventListener('click', (e) => {
-            e.stopPropagation(); // Prevents the container click from firing
+            e.stopPropagation(); 
             resetZoom();
         });
 
@@ -137,7 +162,7 @@
             container.classList.remove('is-zoomed');
             setTimeout(() => {
                 img.style.transformOrigin = `center center`;
-            }, 600); // Wait for transition to finish
+            }, 600); 
         }
     </script>
 
