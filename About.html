@@ -3,13 +3,44 @@
 <head>
 	<title>About me</title>
 </head>
-<body style="background: linear-gradient(
+<style type="text/css">
+	body{
+background: linear-gradient(
     180deg, 
     #0f172a 0%,    /* Deep Midnight */
     #1e1b4b 35%,   /* Dark Indigo */
     #581c87 70%,   /* Twilight Purple */
     #9333ea 100%   /* Soft Horizon Glow */
-  );">
+  )
+	}
+	.btn-container {
+            text-align: right;
+            margin-top: 40px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px 30px;
+            background: transparent;
+            color: white;
+            border: 3px solid yellow;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 800;
+            
+            font-size: clamp(18px, 6vw, 28px); 
+            transition: 0.3s ease;
+        }
+
+        .btn:hover {
+            background: yellow;
+            color: black;
+        }
+
+</style>
+<body>
 <h1 align="center" style="color: yellow;font-size: 72px;font-family: elephat">About <span style="color: white">Me</span></h1>
 <p style="color: white;font-weight: 200;font-size: 26px;">I am a thumbnail designer specializing in creating visually compelling and high-performing designs for digital content creators. With a strong focus on clarity, engagement, and audience psychology, I help transform ideas into thumbnails that not only capture attention but also drive measurable results.
 <br><br>
@@ -33,6 +64,6 @@ If you are looking for a designer who understands both the creative and performa
 
 <div align="right">
 
-<a  href="Home.html" class="btn" style="display: inline-flex;align-items: center;grid-gap: 8px;padding: 10px 30px;background: transparent;color: yellow;border: 4px solid yellow;border-radius: 10px;text-decoration: none;font-weight: 800;font-size: 38px;box-shadow: darkred;overflow: hidden;z-index: 2;">Back </a></div>
+<a  href="Home.html" class="btn">Back </a></div>
 </body>
 </html>
