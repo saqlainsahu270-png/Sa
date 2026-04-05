@@ -135,7 +135,32 @@
             opacity: 0.95;
             letter-spacing: 0.5px;
         }
+.back-container {
+            margin-top: 40px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap:10%;
+        }
 
+        .btn-back {
+            padding: 12px 40px;
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 800;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.2rem;
+            transition: 0.3s;
+        }
+
+        .btn-back:hover {
+            background: white;
+            color: black;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+        }
         
         @media (max-width: 768px) {
             .glass-card { width: 90%; padding: 30px; }
@@ -143,6 +168,7 @@
             .header { flex-direction: column; text-align: center; }
             .profile-pic-container { margin-right: 0; margin-bottom: 20px; }
             .icon-box { width: 75px; height: 75px; font-size: 2rem; }
+                   .btn-back { width: 100%; text-align: center; }
         }
     </style>
 </head>
@@ -181,6 +207,10 @@
                 <span class="platform">LinkedIn</span>
             </a>
         </div>
+               <div class="back-container">
+        <a href="Home.html" class="btn-back">BACK TO HOME</a>
+        <a href="Projects.html" class="btn-back">BACK TO Projects</a>
+    </div>
     </div>
 
 </body>
